@@ -2,9 +2,9 @@ Kencana Oracle: End-to-End Gold Price Forecasting System V2 🪙
 
 Kencana Oracle is an advanced, highly scalable microservices architecture designed for real-time Gold Price (XAU/IDR) forecasting. Version 2.0 bridges the gap between data science experimentation and production-grade inference by introducing machine learning algorithms, high-speed caching mechanisms, and a comprehensive monitoring suite.
 
-==================================================
+
 KEY FEATURES
-==================================================
+
 
 - Advanced Multi-Model Forecasting:
   Supports machine learning (XGBoost) and additive models (Prophet), alongside fine-tuned statistical models (ARIMA & SARIMA) for comprehensive multi-model comparisons.
@@ -24,9 +24,9 @@ KEY FEATURES
 - Enterprise-Grade Architecture:
   Enforces Separation of Concerns (SoC) by isolating data loading, feature engineering, and inference routing layers.
 
-==================================================
+
 TECH STACK
-==================================================
+
 
 Core / Data Science:
 - Python
@@ -55,9 +55,9 @@ Testing & DevOps:
 - Docker
 - Git
 
-==================================================
+
 PROJECT STRUCTURE
-==================================================
+
 
 Kencana_Oracle/
 ├── artifacts/                 
@@ -107,9 +107,9 @@ Kencana_Oracle/
 ├── .gitignore                  
 ├── requirements.txt            
 
-==================================================
+
 INSTALLATION & SETUP
-==================================================
+
 
 1. Clone the Repository
 
@@ -153,9 +153,9 @@ streamlit run dashboard/app.py
 Dashboard:
 http://localhost:8501
 
-==================================================
+
 API ENDPOINTS SUMMARY
-==================================================
+
 
 GET    /                     -> API Health Check
 GET    /prices/history       -> Retrieve historical gold price data
@@ -163,17 +163,17 @@ POST   /predict/future       -> Predict future prices using a specific model
 POST   /predict/compare      -> Compare predictions across multiple AI models
 GET    /predictions/history  -> Admin endpoint to view prediction logs
 
-==================================================
+
 TESTING
-==================================================
+
 
 Run automated test suite:
 
 pytest tests/ -v
 
-==================================================
+
 AUTHOR
-==================================================
+
 
 Developed by R.Ganendra Geanza Aryaputra
 
