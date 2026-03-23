@@ -1,9 +1,9 @@
-Kencana Oracle: End-to-End Gold Price Forecasting System V2 🪙
+# Kencana Oracle: End-to-End Gold Price Forecasting System V2 🪙
 
 Kencana Oracle is an advanced, highly scalable microservices architecture designed for real-time Gold Price (XAU/IDR) forecasting. Version 2.0 bridges the gap between data science experimentation and production-grade inference by introducing machine learning algorithms, high-speed caching mechanisms, and a comprehensive monitoring suite.
 
 
-KEY FEATURES
+## KEY FEATURES
 
 
 - Advanced Multi-Model Forecasting:
@@ -25,7 +25,7 @@ KEY FEATURES
   Enforces Separation of Concerns (SoC) by isolating data loading, feature engineering, and inference routing layers.
 
 
-TECH STACK
+## TECH STACK
 
 
 Core / Data Science:
@@ -56,7 +56,7 @@ Testing & DevOps:
 - Git
 
 
-PROJECT STRUCTURE
+## PROJECT STRUCTURE
 
 
 Kencana_Oracle/
@@ -108,7 +108,7 @@ Kencana_Oracle/
 ├── requirements.txt            
 
 
-INSTALLATION & SETUP
+## INSTALLATION & SETUP
 
 
 1. Clone the Repository
@@ -154,7 +154,7 @@ Dashboard:
 http://localhost:8501
 
 
-API ENDPOINTS SUMMARY
+## API ENDPOINTS SUMMARY
 
 
 GET    /                     -> API Health Check
@@ -164,7 +164,7 @@ POST   /predict/compare      -> Compare predictions across multiple AI models
 GET    /predictions/history  -> Admin endpoint to view prediction logs
 
 
-TESTING
+## TESTING
 
 
 Run automated test suite:
@@ -172,7 +172,7 @@ Run automated test suite:
 pytest tests/ -v
 
 
-AUTHOR
+## AUTHOR
 
 
 Developed by R.Ganendra Geanza Aryaputra
