@@ -1,0 +1,48 @@
+ts-inference-engine/
+├── artifacts/                  # 📦 TEMPAT PENYIMPANAN MODEL
+│   ├── arima_model.pkl         
+│   ├── sarima_model.pkl        
+│   ├── prophet_model.json      # [BARU] Model Prophet biasanya disimpan dalam format JSON (V2)
+│   └──  xgboost_model.json      # [BARU] Model XGBoost (V2)
+│   
+│
+├── config/                     # ⚙️ PENGATURAN & KONFIGURASI
+│   ├── __init__.py
+│   └── setting.py              # [UPDATE] Tambah variabel CACHE_TTL dan path model baru (V2)
+│
+├── src/                        # 🧠 LOGIKA UTAMA (CORE LOGIC)
+│   ├── __init__.py
+│   ├── preprocessor.py         # [BARU] Sangat krusial! Menyiapkan Lag Features (XGB) & ds (Prophet) saat inference (V2)
+│   ├── cache_manager.py        # [BARU] Logika penyimpanan cache prediksi (selama 1 jam) (V2)
+│   ├── loader.py               # [UPDATE] Perlu dirombak agar bisa load file .json, bukan cuma .pkl (V2)
+│   ├── predictor.py            # [UPDATE] Dirombak menjadi Router: Jika ARIMA panggil fungsi A, jika XGB panggil fungsi preprocessor lalu tebak (V2)
+│   ├── utils.py                
+│   ├── database.py             
+│   ├── models.py               
+│   └── crud.py                 # [UPDATE] Tambah fungsi query history prediksi untuk endpoint baru (V2)
+│
+├── scripts/
+│   └── seed_data.py            
+│
+├── api/                        # 🔌 INTERFACE BACKEND (FastAPI)
+│   ├── __init__.py
+│   ├── main.py                 # [UPDATE] Tambah endpoint /predictions/history & /predict/compare (V2)
+│   └── schemas.py              # [UPDATE] Tambah Schema untuk format response history & compare (V2)
+│
+├── dashboard/                  # 📊 INTERFACE FRONTEND (Streamlit)
+│   ├── app.py                  # [UPDATE] Halaman utama (Tambah tombol Export CSV & fitur Compare) (V2)
+│   └── pages/                  # [BARU] Fitur Multipage Streamlit (V2)
+│       └── 1_monitoring.py     # [BARU] Halaman UI Admin untuk menampilkan History Prediksi (V2)
+│
+├── tests/                      # 🧪 PENGUJIAN OTOMATIS
+│   ├── __init__.py
+│   ├── test_predictor.py       
+│   └── test_ml_inference.py    # [BARU] Test khusus untuk memastikan Feature Engineering XGBoost berjalan benar
+│
+├── notebook/
+│   └── main.ipynb
+│
+├── .env                        
+├── .gitignore                  
+├── requirements.txt            # [UPDATE] Tambah library: xgboost, prophet, redis/cachetools
+└── README.md
